@@ -2,12 +2,12 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
 	id("java-library")
-	id("org.springframework.boot") version "3.0.3"
+	id("org.springframework.boot") version "3.1.0"
 	id("io.spring.dependency-management") version "1.1.0"
-	id("org.jetbrains.kotlin.plugin.noarg") version "1.8.21"
-	kotlin("jvm") version "1.8.21"
-	kotlin("plugin.spring") version "1.8.21"
-	kotlin("plugin.serialization") version "1.8.21"
+	id("org.jetbrains.kotlin.plugin.noarg") version "1.8.22"
+	kotlin("jvm") version "1.8.22"
+	kotlin("plugin.spring") version "1.8.22"
+	kotlin("plugin.serialization") version "1.8.22"
 }
 
 group = "com.github.buckcri.xclacks"
@@ -28,7 +28,7 @@ dependencies {
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-webflux")
-	testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.8.21")
+	testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.8.22")
 }
 
 tasks.withType<KotlinCompile> {
