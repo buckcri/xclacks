@@ -28,7 +28,7 @@ dependencies {
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-webflux")
-	testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.8.21")
+	testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.8.22")
 }
 
 tasks.withType<KotlinCompile> {
