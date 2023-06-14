@@ -15,11 +15,11 @@ Add this jar to your classpath. You may also need to configure servlet filter cl
 
 ### Spring Boot 3.x or higher
 
-Add `@ServletComponentScan("com.github.buckcri.xclacks")`, for example when declaring `@SpringBootApplication`:
+Add `@ServletComponentScan("io.github.buckcri.xclacks")`, for example when declaring `@SpringBootApplication`:
 ````
 import org.springframework.boot.web.servlet.ServletComponentScan
 
 @SpringBootApplication
-@ServletComponentScan("com.github.buckcri.xclacks")
+@ServletComponentScan("io.github.buckcri.xclacks")
 class MySpringBootApplication
 ````
