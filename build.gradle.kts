@@ -11,7 +11,7 @@ plugins {
 	`maven-publish`
 }
 
-group = "com.github.buckcri.xclacks"
+group = "io.github.buckcri.xclacks"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 

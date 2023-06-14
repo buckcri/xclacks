@@ -1,4 +1,4 @@
-package com.github.buckcri.xclacks
+package io.github.buckcri.xclacks
 
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
