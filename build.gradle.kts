@@ -8,6 +8,7 @@ plugins {
 	kotlin("jvm") version "1.8.22"
 	kotlin("plugin.spring") version "1.8.22"
 	kotlin("plugin.serialization") version "1.8.22"
+	`maven-publish`
 }
 
 group = "com.github.buckcri.xclacks"
@@ -40,4 +41,44 @@ tasks.withType<KotlinCompile> {
 
 tasks.test {
 	useJUnitPlatform()
+}
+
+publishing {
+	publications {
+		create<MavenPublication>("maven") {
+			pom {
+				name.set("XClacks")
+				description.set("Servlet 3.0 filter adding http header 'X-Clacks-Overhead'")
+				url.set("https://github.com/buckcri/xclacks")
+				licenses {
+					license {
+						name.set("The MIT License (MIT)")
+						url.set("https://opensource.org/license/mit/")
+					}
+				}
+				developers {
+					developer {
+						id.set("buckcri")
+						name.set("Christian Buck")
+						email.set("buckcri@protonmail.com")
+					}
+				}
+				scm {
+					connection.set("https://github.com/buckcri/xclacks.git")
+					developerConnection.set("https://github.com/buckcri/xclacks.git")
+					url.set("https://github.com/buckcri/xclacks")
+				}
+				repositories {
+					maven {
+						name = "OSSRH"
+						url = uri("https://oss.sonatype.org/service/local/staging/deploy/maven2/")
+						credentials {
+							username = System.getenv("MAVEN_USERNAME")
+							password = System.getenv("MAVEN_PASSWORD")
+						}
+					}
+				}
+			}
+		}
+	}
 }
