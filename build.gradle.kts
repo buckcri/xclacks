@@ -4,10 +4,8 @@ plugins {
 	id("java-library")
 	id("org.springframework.boot") version "3.1.0"
 	id("io.spring.dependency-management") version "1.1.0"
-	id("org.jetbrains.kotlin.plugin.noarg") version "1.8.22"
 	kotlin("jvm") version "1.8.22"
 	kotlin("plugin.spring") version "1.8.22"
-	kotlin("plugin.serialization") version "1.8.22"
 	`maven-publish`
 	signing
 }
@@ -31,8 +29,9 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-web")
+	compileOnly("jakarta.servlet:jakarta.servlet-api:6.0.0")
 
+	testImplementation("org.springframework.boot:spring-boot-starter-web")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-webflux")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.8.22")
