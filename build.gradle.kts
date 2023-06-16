@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "io.github.buckcri.xclacks"
-version = "0.0.1-SNAPSHOT"
+version = "1.0.0"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 // Spring Boot is only used for testing. Building a boot jar fails because of missing boot application, so we need to disable that task:
