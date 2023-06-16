@@ -23,3 +23,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan
 @ServletComponentScan("io.github.buckcri.xclacks")
 class MySpringBootApplication
 ````
+
+## Download
+
+XClacks is available on [Maven Central](https://central.sonatype.com/artifact/io.github.buckcri.xclacks/xclacks/). 
